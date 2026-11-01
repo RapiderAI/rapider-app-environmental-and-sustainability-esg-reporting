@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapider Environmental &amp; Sustainability / ESG Reporting</title>
+  <script src="https://kit.fontawesome.com/5b23df26dc.js" crossorigin="anonymous" defer></script>
+  <script src="/assets/js/rapider-components.js" defer></script>
+  <link rel="stylesheet" href="/assets/themes/rapider-tailwind-theme.css">
+  <link rel="stylesheet" href="/assets/themes/crm-expenses-design.css">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+    iframe#appFrame { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" src="pages/esg-dashboard/esg-dashboard.html"></iframe>
+  <script>
+    const routes = {
+  "esg-dashboard": "pages/esg-dashboard/esg-dashboard.html",
+  "ghg-ledger": "pages/ghg-ledger/ghg-ledger.html",
+  "activity-ingestion": "pages/activity-ingestion/activity-ingestion.html",
+  "esg-metrics": "pages/esg-metrics/esg-metrics.html",
+  "disclosure-hub": "pages/disclosure-hub/disclosure-hub.html",
+  "decarbonization-plan": "pages/decarbonization-plan/decarbonization-plan.html",
+  "emission-factors": "pages/emission-factors/emission-factors.html",
+  "eac-certificates": "pages/eac-certificates/eac-certificates.html",
+  "reporting-periods": "pages/reporting-periods/reporting-periods.html",
+  "ghg-entry-detail": "pages/ghg-entry-detail/ghg-entry-detail.html",
+  "disclosure-detail": "pages/disclosure-detail/disclosure-detail.html",
+  "activity-record-drawer": "pages/activity-record-drawer/activity-record-drawer.html"
+};
+    function handleHash() {
+      const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      const route = hash || 'esg-dashboard';
+      const target = routes[route] || routes['esg-dashboard'];
+      const iframe = document.getElementById('appFrame');
+      if (iframe) iframe.src = target;
+    }
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('load', handleHash);
+  </script>
+</body>
+</html>
