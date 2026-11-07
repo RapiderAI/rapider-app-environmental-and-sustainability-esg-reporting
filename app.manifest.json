@@ -1,4 +1,138 @@
 {
+  "pages": [
+    {
+      "name": "Climate & ESG Command",
+      "route": "esg-dashboard",
+      "htmlFilePath": "pages/esg-dashboard/esg-dashboard.html",
+      "title": "Climate & ESG Command",
+      "group": "Overview",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "Executive KPI cards (Gross Scope 1, Location/Market Scope 2, Scope 3, Carbon Intensity), SBTi trajectory chart, framework readiness gauges via findSWR/countSWR."
+    },
+    {
+      "name": "GHG Emissions Ledger",
+      "route": "ghg-ledger",
+      "htmlFilePath": "pages/ghg-ledger/ghg-ledger.html",
+      "title": "GHG Emissions Ledger",
+      "group": "Overview",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Filterable Scope 1/2/3 ledger (IndGhgCalculationEntry) with #activeFilterTagsBar + Clear all, clickable entry ref to lineage view, icon+text Edit (drafts), icon-only Delete."
+    },
+    {
+      "name": "Activity & Spend Feeds",
+      "route": "activity-ingestion",
+      "htmlFilePath": "pages/activity-ingestion/activity-ingestion.html",
+      "title": "Activity & Spend Feeds",
+      "group": "Overview",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "Sync status & staging queue (IndActivityRecord) from #194 utilities, FinSupplierBill, ExpExpense, and CSV uploads; outlier badges & unmapped spend filter pills."
+    },
+    {
+      "name": "E, S & G Metric Hub",
+      "route": "esg-metrics",
+      "htmlFilePath": "pages/esg-metrics/esg-metrics.html",
+      "title": "E, S & G Metric Hub",
+      "group": "Disclosures & Targets",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Quantitative/qualitative datapoints (IndEsgMetricDatapoint) for Water, Waste, Workforce & Governance with <rapider-kanban> status board (OPEN -> SUBMITTED -> VERIFIED)."
+    },
+    {
+      "name": "CSRD / ISSB Disclosures",
+      "route": "disclosure-hub",
+      "htmlFilePath": "pages/disclosure-hub/disclosure-hub.html",
+      "title": "CSRD / ISSB Disclosures",
+      "group": "Disclosures & Targets",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "Multi-framework schedule workspace (IndDisclosureRequirement) for ESRS, IFRS S1/S2, CDP & SB 253 with Double Materiality filter, evidence counter, and assurance status."
+    },
+    {
+      "name": "Net-Zero & Abatement",
+      "route": "decarbonization-plan",
+      "htmlFilePath": "pages/decarbonization-plan/decarbonization-plan.html",
+      "title": "Net-Zero & Abatement",
+      "group": "Disclosures & Targets",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "SBTi target burndown, Marginal Abatement Cost Curve (\\$/tCO2e), and IndAbatementInitiative table linked to ApmProject execution milestones."
+    },
+    {
+      "name": "Emission Factor Library",
+      "route": "emission-factors",
+      "htmlFilePath": "pages/emission-factors/emission-factors.html",
+      "title": "Emission Factor Library",
+      "group": "Governance",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "Searchable catalog (IndEmissionFactor) across EPA, DEFRA, IEA, CEDA, and approved supplier PCFs with version pinning and GWP (AR5/AR6) selector."
+    },
+    {
+      "name": "Renewable EACs & Offsets",
+      "route": "eac-certificates",
+      "htmlFilePath": "pages/eac-certificates/eac-certificates.html",
+      "title": "Renewable EACs & Offsets",
+      "group": "Governance",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Registry of RECs, Guarantees of Origin, PPAs, and carbon removals (IndEnergyAttributeCertificate) with facility allocation meter matching and retirement proof."
+    },
+    {
+      "name": "Boundaries & Assurance",
+      "route": "reporting-periods",
+      "htmlFilePath": "pages/reporting-periods/reporting-periods.html",
+      "title": "Boundaries & Assurance",
+      "group": "Governance",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "IndEsgReportingPeriod configuration, FinLegalEntity consolidation weights, Double Materiality matrix (IndMaterialityTopic), and read-only Auditor Assurance Room toggle."
+    },
+    {
+      "name": "Calculation Lineage Detail",
+      "route": "ghg-entry-detail",
+      "htmlFilePath": "pages/ghg-entry-detail/ghg-entry-detail.html",
+      "title": "Calculation Lineage Detail",
+      "group": "(Hidden)",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Full formula breakdown, input activity unit conversion, pinned IndEmissionFactor citation, source invoice/meter link, SHA-256 audit hash, and #btnGoBack state restoration."
+    },
+    {
+      "name": "Disclosure Requirement View",
+      "route": "disclosure-detail",
+      "htmlFilePath": "pages/disclosure-detail/disclosure-detail.html",
+      "title": "Disclosure Requirement View",
+      "group": "(Hidden)",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "ESRS/ISSB requirement text, bound quantitative metrics, citation-grounded AI narrative editor (projectChannelMessage), evidence attachments, and WorkItem sign-off trigger."
+    },
+    {
+      "name": "Log / Map Activity Drawer",
+      "route": "activity-record-drawer",
+      "htmlFilePath": "pages/activity-record-drawer/activity-record-drawer.html",
+      "title": "Log / Map Activity Drawer",
+      "group": "(Hidden)",
+      "icon": "fas fa-briefcase",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding drawer to log manual facility activity or map uncategorized FinSupplierBill spend lines; auto-closes via closePageDrawer(), resets button in finally, broadcasts refresh."
+    }
+  ],
   "name": "Rapider Environmental & Sustainability / ESG Reporting",
   "key": "environmental-and-sustainability-esg-reporting",
   "domainKey": "IND",
@@ -4356,140 +4490,6 @@
   "workflows": [],
   "variables": [],
   "tools": [],
-  "pages": [
-    {
-      "name": "Climate & ESG Command",
-      "route": "esg-dashboard",
-      "htmlFilePath": "pages/esg-dashboard/esg-dashboard.html",
-      "title": "Climate & ESG Command",
-      "group": "Overview",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 1,
-      "developmentDetails": "Executive KPI cards (Gross Scope 1, Location/Market Scope 2, Scope 3, Carbon Intensity), SBTi trajectory chart, framework readiness gauges via findSWR/countSWR."
-    },
-    {
-      "name": "GHG Emissions Ledger",
-      "route": "ghg-ledger",
-      "htmlFilePath": "pages/ghg-ledger/ghg-ledger.html",
-      "title": "GHG Emissions Ledger",
-      "group": "Overview",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 2,
-      "developmentDetails": "Filterable Scope 1/2/3 ledger (IndGhgCalculationEntry) with #activeFilterTagsBar + Clear all, clickable entry ref to lineage view, icon+text Edit (drafts), icon-only Delete."
-    },
-    {
-      "name": "Activity & Spend Feeds",
-      "route": "activity-ingestion",
-      "htmlFilePath": "pages/activity-ingestion/activity-ingestion.html",
-      "title": "Activity & Spend Feeds",
-      "group": "Overview",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 3,
-      "developmentDetails": "Sync status & staging queue (IndActivityRecord) from #194 utilities, FinSupplierBill, ExpExpense, and CSV uploads; outlier badges & unmapped spend filter pills."
-    },
-    {
-      "name": "E, S & G Metric Hub",
-      "route": "esg-metrics",
-      "htmlFilePath": "pages/esg-metrics/esg-metrics.html",
-      "title": "E, S & G Metric Hub",
-      "group": "Disclosures & Targets",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 4,
-      "developmentDetails": "Quantitative/qualitative datapoints (IndEsgMetricDatapoint) for Water, Waste, Workforce & Governance with <rapider-kanban> status board (OPEN -> SUBMITTED -> VERIFIED)."
-    },
-    {
-      "name": "CSRD / ISSB Disclosures",
-      "route": "disclosure-hub",
-      "htmlFilePath": "pages/disclosure-hub/disclosure-hub.html",
-      "title": "CSRD / ISSB Disclosures",
-      "group": "Disclosures & Targets",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 5,
-      "developmentDetails": "Multi-framework schedule workspace (IndDisclosureRequirement) for ESRS, IFRS S1/S2, CDP & SB 253 with Double Materiality filter, evidence counter, and assurance status."
-    },
-    {
-      "name": "Net-Zero & Abatement",
-      "route": "decarbonization-plan",
-      "htmlFilePath": "pages/decarbonization-plan/decarbonization-plan.html",
-      "title": "Net-Zero & Abatement",
-      "group": "Disclosures & Targets",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 6,
-      "developmentDetails": "SBTi target burndown, Marginal Abatement Cost Curve (\\$/tCO2e), and IndAbatementInitiative table linked to ApmProject execution milestones."
-    },
-    {
-      "name": "Emission Factor Library",
-      "route": "emission-factors",
-      "htmlFilePath": "pages/emission-factors/emission-factors.html",
-      "title": "Emission Factor Library",
-      "group": "Governance",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 7,
-      "developmentDetails": "Searchable catalog (IndEmissionFactor) across EPA, DEFRA, IEA, CEDA, and approved supplier PCFs with version pinning and GWP (AR5/AR6) selector."
-    },
-    {
-      "name": "Renewable EACs & Offsets",
-      "route": "eac-certificates",
-      "htmlFilePath": "pages/eac-certificates/eac-certificates.html",
-      "title": "Renewable EACs & Offsets",
-      "group": "Governance",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 8,
-      "developmentDetails": "Registry of RECs, Guarantees of Origin, PPAs, and carbon removals (IndEnergyAttributeCertificate) with facility allocation meter matching and retirement proof."
-    },
-    {
-      "name": "Boundaries & Assurance",
-      "route": "reporting-periods",
-      "htmlFilePath": "pages/reporting-periods/reporting-periods.html",
-      "title": "Boundaries & Assurance",
-      "group": "Governance",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": true,
-      "order": 9,
-      "developmentDetails": "IndEsgReportingPeriod configuration, FinLegalEntity consolidation weights, Double Materiality matrix (IndMaterialityTopic), and read-only Auditor Assurance Room toggle."
-    },
-    {
-      "name": "Calculation Lineage Detail",
-      "route": "ghg-entry-detail",
-      "htmlFilePath": "pages/ghg-entry-detail/ghg-entry-detail.html",
-      "title": "Calculation Lineage Detail",
-      "group": "(Hidden)",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": false,
-      "order": 10,
-      "developmentDetails": "Full formula breakdown, input activity unit conversion, pinned IndEmissionFactor citation, source invoice/meter link, SHA-256 audit hash, and #btnGoBack state restoration."
-    },
-    {
-      "name": "Disclosure Requirement View",
-      "route": "disclosure-detail",
-      "htmlFilePath": "pages/disclosure-detail/disclosure-detail.html",
-      "title": "Disclosure Requirement View",
-      "group": "(Hidden)",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": false,
-      "order": 11,
-      "developmentDetails": "ESRS/ISSB requirement text, bound quantitative metrics, citation-grounded AI narrative editor (projectChannelMessage), evidence attachments, and WorkItem sign-off trigger."
-    },
-    {
-      "name": "Log / Map Activity Drawer",
-      "route": "activity-record-drawer",
-      "htmlFilePath": "pages/activity-record-drawer/activity-record-drawer.html",
-      "title": "Log / Map Activity Drawer",
-      "group": "(Hidden)",
-      "icon": "fas fa-briefcase",
-      "displayInMenu": false,
-      "order": 12,
-      "developmentDetails": "Sliding drawer to log manual facility activity or map uncategorized FinSupplierBill spend lines; auto-closes via closePageDrawer(), resets button in finally, broadcasts refresh."
-    }
-  ],
   "isPaid": false,
   "price": "Free",
   "developerName": "Tansel Ozkusaksiz",
@@ -4673,11 +4673,5 @@
     "updatedAt": "2026-11-05T12:42:11.850Z",
     "pagesCount": 12
   },
-  "integrations": [
-    {
-      "id": "db4d6783-afbe-449d-8b9f-c219b2cf0160",
-      "type": "app",
-      "name": "Rapider Medical Laboratory Information Management"
-    }
-  ]
+  "integrations": []
 }
